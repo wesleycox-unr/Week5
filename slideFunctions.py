@@ -54,16 +54,42 @@ def doubleTo100(num):
     
     return n
     
-print("Number of doubling events : {0}".format(doubleTo100(10)))
+#print("Number of doubling events : {0}".format(doubleTo100(10)))
+    
+def doubleTo100recursion(num):
+    #base case
+    if num > 100:
+        return 0
     
     
+    return doubleTo100recursion(2*num) + 1
     
+#print(doubleTo100recursion(10))
     
+def fibRecursive(n):
+    # fib_n = fib_n-1 + fib_n-2
     
+    #base case
+    if n < 2:
+        return n
     
+    return fibRecursive(n-1) + fibRecursive(n-2)
     
+# 0 1 1 2 3 5 8 13 21 34 = fib
+# 0 1 2 3 4 5 6  7  8  9 = index
+#print(fibRecursive(9))
+
+def factorialRecursive(n):
     
+    #base case
+    if n == 1:
+        return 1
     
+    return n * factorialRecursive(n-1)
+    
+inputNumber = 5
+print("The factorial of {0} is {1}".format(inputNumber,factorialRecursive(inputNumber)))
+   
     
     
     
